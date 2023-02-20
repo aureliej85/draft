@@ -1,0 +1,118 @@
+@use "../style/mixins";
+@use "../style/variables";
+
+
+.accordeonDiv{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+
+    &__bloc {
+        max-width: 1200px;
+        cursor: pointer;
+        padding: 20px 10px 0 20px;
+
+        &__content {
+            width: 100%;
+
+            &__title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include mixins.text(40px, 600, #ffffff);
+            }
+
+            &__subtitle {
+                width: 30%;
+                text-align: left;
+                @include mixins.text(27px, 500, #ffffff);
+                padding: 50px 0 50px 0;
+            }
+
+            &__descr {
+                width: 30%;
+                text-align: left;
+                @include mixins.text(16px, 400, #ffffff);
+                padding: 10px 0 30px 0;
+            }
+
+        }
+      
+    
+        &__head {
+            @include mixins.text(40px, 500, #ffffff);
+            text-align: left;
+            padding: 5px;
+        }
+
+
+        @include mixins.mobile {
+
+            &__content {
+
+                &__title {
+                    @include mixins.text(30px, 500, #ffffff);
+
+                    &__img{
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                }
+
+                &__subtitle {
+                    width: 100%;
+                    @include mixins.text(20px, 400, #ffffff);
+                    padding: 10px 0 10px 0;
+
+                }
+
+                &__descr {
+                    width: 100%;
+                    @include mixins.text(15px, 400, #ffffff);
+
+                }
+            }
+
+            &__head{
+                @include mixins.text(30px, 500, #ffffff);
+            }
+        
+        }
+    
+    
+    
+    }
+
+    
+}
+
+
+.hide {
+    display: none;
+}
+
+.bgBlue {
+    background-color: #0F84D1;
+}
+
+.bgBlueDark {
+    background-color: #0677C3;
+}
+
+.bgOrange {
+    background-color: #EF8451;
+}
+
+.bgOrangeDark {
+    background-color: #EA6418;
+}
+
+#firstAcc {
+    border-radius: 10px 10px 0 0;
+}
+
+#forthAcc {
+    border-radius: 0 0 10px 10px;
+}

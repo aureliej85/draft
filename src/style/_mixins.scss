@@ -1,0 +1,22 @@
+@use "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap");
+
+@mixin mobile {
+    @media screen and (min-width: map-get(variables.$breakpoints, mobile-min)) and (max-width: map-get(variables.$breakpoints, mobile-max)) {
+      @content;
+    }
+  }
+
+
+  @mixin tablet {
+    @media screen and (min-width: map-get(variables.$breakpoints, tablet-min)) and (max-width: map-get(variables.$breakpoints, tablet-max)) {
+      @content;
+    }
+  }
+
+  @mixin text($size, $weight, $color) {
+    font-family: Roboto;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+  }

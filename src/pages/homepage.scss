@@ -1,0 +1,31 @@
+@use "../style/mixins";
+@use "../style/variables";
+
+
+.homepage {
+    padding: 0 15px 0 15px;
+    margin: auto;
+
+    &__section__accordeon {
+        padding: 50px 0 50px 0;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    &__section__logos {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    &__section__blocs {
+        max-width: 1200px;
+        padding-top: 50px;
+        margin: auto;
+
+        &__title {
+            text-align: left;
+            @include mixins.text(16px, 500, variables.$tertiary);
+            padding-bottom: 30px;
+        }
+    }
+}

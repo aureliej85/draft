@@ -1,0 +1,189 @@
+@use "../style/mixins";
+@use "../style/variables";
+
+
+.blocsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    &__1 {
+        width: 40%;
+        cursor: pointer;
+
+        &__img {
+
+            img {
+
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 1px 1px 1px transparent;
+                transition: box-shadow 0.3s ease-in-out;
+                
+
+                &:hover {
+                    box-shadow: 6px 4px 13px rgb(51 51 51);
+                }
+            }
+            
+        }
+
+        &__title {
+            text-align: left;
+            @include mixins.text(27px, 500, variables.$primary);
+            padding: 10px 0 10px 0;
+        }
+
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &__puce{
+                background-color: variables.$bluehp;
+                @include mixins.text(13px, 300, #ffffff);
+                border-radius: 25px;
+            padding-top: 5px;
+                width: 60px;
+                height: 20px;
+            }
+
+            &__date {
+                padding-left: 7px;
+                @include mixins.text(13px, 300, #000000);
+                font-style: italic;
+            }
+        }
+    }
+
+    &__2 {
+        width: 23%;
+        cursor: pointer;
+
+        &__title{
+            text-align: left;
+            @include mixins.text(20px, 500, variables.$primary);
+            padding: 10px 0 10px 0;
+        }
+
+        &__descr {
+            text-align: left;
+            @include mixins.text(15px, 400, variables.$primary);
+            padding: 20px 0 10px;
+
+        }
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px 0 20px 0;
+
+            &__puce{
+                background-color: variables.$bluehp;
+                @include mixins.text(13px, 300, #ffffff);
+                border-radius: 25px;
+            padding-top: 5px;
+                width: 60px;
+                height: 20px;
+            }
+
+            &__date {
+                padding-left: 7px;
+                @include mixins.text(13px, 300, #000000);
+                font-style: italic;
+            }
+        }
+    }
+
+    &__3 {
+        width: 23%;
+        cursor: pointer;
+
+        &__img {
+           
+
+            img {
+
+                width: 100%;
+                box-shadow: 1px 1px 1px transparent;
+                transition: box-shadow 0.3s ease-in-out;
+
+                &:hover {
+                    box-shadow: 6px 4px 13px rgb(51 51 51);
+                }
+               
+            }
+            
+        }
+
+        &__title{
+            text-align: left;
+            @include mixins.text(20px, 500, variables.$primary);
+            padding: 10px 0 10px 0;
+        }
+
+        &__descr {
+            text-align: left;
+            @include mixins.text(15px, 400, variables.$primary);
+            padding: 20px 0 10px;
+
+        }
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px 0 20px 0;
+
+            &__puce{
+                background-color: variables.$bluehp;
+                @include mixins.text(13px, 300, #ffffff);
+                border-radius: 25px;
+            padding-top: 5px;
+                width: 60px;
+                height: 20px;
+            }
+
+            &__date {
+                padding-left: 7px;
+                @include mixins.text(13px, 300, #000000);
+                font-style: italic;
+            }
+        }
+    }
+
+    @include mixins.mobile{
+        flex-direction: column;
+
+        article {
+            padding-bottom: 40px;
+        }
+
+        &__1{
+            width: 100%;
+        }
+
+        &__2{
+            width: 100%;
+
+            &__descr {
+                padding: 5px 0 5px 0;
+            }
+
+            &__meta {
+                padding: 5px 0 5px 0;
+            }
+        }
+
+        &__3{
+            width: 100%;
+            &__descr {
+                padding: 5px 0 5px 0;
+            }
+
+            &__meta {
+                padding: 5px 0 5px 0;
+            }
+        }
+    }
+}

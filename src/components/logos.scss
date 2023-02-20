@@ -1,0 +1,21 @@
+@use "../style/mixins";
+@use "../style/variables";
+
+
+.logosDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  
+
+    @include mixins.mobile{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        img {
+            margin-right: 20px;
+        }
+        
+    }
+}
